@@ -228,64 +228,10 @@ def main():
 
 
 
-    # You can use print statements as follows for debugging, they'll be visible when running tests.
-    print("Logs from your program will appear here!", file=sys.stderr)
+    
+    print("Logs will appear here.", file=sys.stderr)
 
     
 
 if __name__ == "__main__":
     main()
-
- 
-'''
-def tokenize(file_contents: str):
-    error_code = False
-    equal_equal = False
-    for i, c in enumerate(file_contents):
-        if c == "(":
-            print("LEFT_PAREN ( null")
-        elif c == ")":
-            print("RIGHT_PAREN ) null")
-        elif c == "{":
-            print("LEFT_BRACE { null")
-        elif c == "}":
-            print("RIGHT_BRACE } null")
-        elif c == "*":
-            print("STAR * null")
-        elif c == ",":
-            print("COMMA , null")
-        elif c == ".":
-            print("DOT . null")
-        elif c == "+":
-            print("PLUS + null")    
-        elif c == "-":
-            print("MINUS - null")
-        elif c == "/":
-            print("SLASH / null")
-        elif c == ";":
-            print("SEMICOLON ; null")
-        elif c == "=":
-            if i+1 < len(file_contents):
-                if file_contents[i+1] == "=":
-                    equal_equal = True
-                    print("EQUAL_EQUAL == null")
-            if not equal_equal:
-                print("EQUAL = null")
-        elif c == " ":
-            print("EOF  null") 
-        else:
-            error_code = True
-            line_number = file_contents.count("\n", 0, file_contents.find(c)) +1
-            print(
-                "[line %s] Error: Unexpected character: %s" % (line_number, c), file=sys.stderr,
-            )
-    print("EOF  null")    
-    if error_code:
-        exit(65)
-    else:
-        exit(0)
-
-'''
-
-
-
